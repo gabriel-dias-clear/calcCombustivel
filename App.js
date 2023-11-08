@@ -10,12 +10,14 @@ export default function App() {
   const [object, setObject] = useState({})
 
   function Calc(valueGas, valueAl){
-    valueGas.replace(',' , '.')
-    valueAl.replace(',' , '.')
+
+    let reValueGas = valueGas.replace(',', '.')
+    let reValueAlc = valueAl.replace(',', '.')
     
-    let calc = Number(valueAl) / Number(valueGas)
+    let calc = Number(reValueGas) / Number(reValueAlc)
+
     
-    return calc
+    return calc.toFixed(2)
   }
 
   function HandleButton(){
